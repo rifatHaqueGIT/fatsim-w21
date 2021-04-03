@@ -11,7 +11,7 @@ def fmt_seconds(s):
   h = int(s) // 3600
   m = (int(s) % 3600) // 60
   s = s - h * 3600 - m * 60
-  return f"{h:02d}:{m:02d}:{s:2.2f}"
+  return f"{h:02d}:{m:02d}:{s:05.2f}"
 
 def trace(b, fat):
   length = 1
