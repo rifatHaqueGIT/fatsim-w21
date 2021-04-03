@@ -66,7 +66,7 @@ def main(n):
     while fm.size() < n:
         if rn() < 0.1:
             files.append( fm.cycle( rr(1, s)))
-        elif rn() < 0.2 or len(files) < 3:
+        elif rn() < 0.1 or len(files) < 3:
             files.append( fm.alloc( rr(1,2*s)))
         else:
             f = files[rr(0,len(files))]
@@ -81,8 +81,12 @@ def main(n):
 
 if __name__ == "__main__":
     n = 100
-    if len(sys.argv) == 2:
+    seed = 0
+    if len(sys.argv) >= 2:
         n = int(sys.argv[1])
+    if len(sys.argv) >= 3:
+        seed = int(sys.argv[2])
+    random.seed( seed, 2)
 
     main(n)
     
