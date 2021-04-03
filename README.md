@@ -5,30 +5,34 @@ starter code for assignment 5
 Testing:
 
 ## `test1.txt`
-```
-$ ./fatsim < test1.txt
-chain sizes: 1 1 5
-elapsed time: 0.000s
-
-$ cat test1.txt
-  6 12  7  7 -1 15  9 15  6 10
- 14  0 -1 11 13  1 12 -1 11 18
-```
 ![graph for test1.txt](test1.svg "graph for test1.txt")
 
 ```
-$ ./fatsim < test2.txt
-blocks in largest file: 9
-blocks not in any file: 0
-elapsed time:           0.000
+$ cat test1.txt
+  6 12  7  7 -1 15  9 15  6 10
+ 14  0 -1 11 13  1 12 -1 11 18
 
+$ ./fatsim < test1.txt
+chain sizes: 1 1 5
+elapsed time: 0.000s
+```
+
+## `test2.txt`
+![graph for test2.txt](test2.svg "graph for test2.txt")
+
+```
 $ cat test2.txt
 1 2 3 4 5 6 7 -1
 7 6 5 4 3 2 1 0
 0 1 2 0 4 4 6 7
 0 1 2 3 4 5 6 7
+
+
+$ ./fatsim < test2.txt
+blocks in largest file: 9
+blocks not in any file: 0
+elapsed time:           0.000
 ```
-![graph for test2.txt](test2.svg "graph for test2.txt")
 
 ```
 $ ./fatsim < test3.txt
